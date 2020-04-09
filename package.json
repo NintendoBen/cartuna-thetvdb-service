@@ -1,0 +1,15 @@
+{
+  "name": "cartuna-thetvdb-service",
+  "version": "1.0.0",
+  "author": "Ben Zabloski",
+  "license": "ISC",
+  "main": "index.js",
+  "dependencies": {
+    "apollo-server": "^2.12.0",
+    "graphql": "^15.0.0",
+    "graphql-tag": "^2.10.3"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
