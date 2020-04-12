@@ -8,8 +8,17 @@ const tvdb = new TVDB(process.env.THE_TV_DB_API_KEY);
 
 const typeDefs = gql`
   type Series {
-    id: String!
+    aliases: [String!]!
+    banner: String
+    firstAired: String!
+    id: ID!
+    image: String!
+    network: String!
+    overview: String!
+    poster: String!
     seriesName: String!
+    slug: String!
+    status: String!
   }
 
   type Query {
