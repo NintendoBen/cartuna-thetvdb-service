@@ -51,6 +51,8 @@ const resolvers = {
 
 const schema = new ApolloServer({ typeDefs, resolvers });
 
-schema.listen({ port: process.env.PORT }).then(({ url }) => {
-  console.log(`schema ready at ${url}`);
-});
+schema
+  .listen({ host: process.env.HOST, port: process.env.PORT })
+  .then(({ url }) => {
+    console.log(`schema ready at ${url}`);
+  });
