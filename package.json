@@ -7,9 +7,15 @@
   "dependencies": {
     "apollo-server": "^2.12.0",
     "graphql": "^15.0.0",
-    "graphql-tag": "^2.10.3"
+    "graphql-tag": "^2.10.3",
+    "node-tvdb": "^4.1.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.3"
   },
   "scripts": {
-    "start": "node index.js"
+    "dev": "nodemon source/index.js",
+    "start": "node source/index.js"
   }
 }
