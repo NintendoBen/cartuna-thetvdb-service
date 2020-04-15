@@ -7,23 +7,48 @@ const TVDB = require("node-tvdb");
 const tvdb = new TVDB(process.env.THE_TV_DB_API_KEY);
 
 const typeDefs = gql`
-  type Series {
-    aliases: [String!]!
+  type SeriesSearch {
+    aliases: [String]
     banner: String
-    firstAired: String!
+    firstAired: String
     id: ID!
-    image: String!
-    network: String!
-    overview: String!
-    poster: String!
-    seriesName: String!
-    slug: String!
-    status: String!
+    image: String
+    network: String
+    overview: String
+    poster: String
+    seriesName: String
+    slug: String
+    status: String
+  }
+
+  type Series {
+    added: String
+    airsDayOfWeek: String
+    airsTime: String
+    aliases: [String]
+    banner: String
+    firstAired: String
+    genre: [String]
+    id: ID!
+    imdbId: String
+    lastUpdated: Int
+    network: String
+    networkId: String
+    overview: String
+    rating: String
+    runtime: String
+    seriesId: String
+    seriesName: String
+    siteRating: Int
+    siteRatingCount: Int
+    slug: String
+    status: String
+    zap2itId: String
   }
 
   type Query {
-    getSeriesByID(id: String!): Series
-    getSeriesByName(name: String): [Series]
+    getSeriesByID(id: String): Series
+    getSeriesByName(name: String): [SeriesSearch]
   }
 `;
 
